@@ -1,27 +1,7 @@
 import React, { useState } from "react";
 
 const Contact = () => {
-  const [data, setData] = useState({
-    fullname: "",
-    phone: "",
-    email: "",
-    message: ""
-  });
-  const InputEvent = (event) => {
-    const { name, value } = event.target;
-    setData((preVal) => {
-      return {
-        ...preVal,
-        [name]: value
-      };
-    });
-  };
-  const formSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      `My name is ${data.fullname}. My mobile number is ${data.phone} My email is ${data.email} My message is ${data.message}`
-    );
-  };
+  
   return (
     <>
       <div className="my-5">
@@ -31,15 +11,15 @@ const Contact = () => {
       <div className="container contact_div">
         <div className="row">
           <div class="col-md-6 col-10 mx-auto">
-            <form onSubmit={formSubmit} action="https://formspree.io/f/xyyljrpy" method="POST">
+            <form  action="https://formspree.io/f/xyyljrpy" method="POST">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                   Full Name
                 </label>
                 <input
                   name="fullname"
-                  value={data.fullname}
-                  onChange={InputEvent}
+                 
+                 
                   type="text"
                   class="form-control"
                   placeholder="Enter your name"
@@ -53,8 +33,8 @@ const Contact = () => {
                   type="number"
                   class="form-control"
                   name="phone"
-                  value={data.phone}
-                  onChange={InputEvent}
+                  
+                  
                   placeholder="Mobile Number"
                 />
               </div>
@@ -66,8 +46,8 @@ const Contact = () => {
                   type="email"
                   class="form-control"
                   name="email"
-                  value={data.email}
-                  onChange={InputEvent}
+                 
+                  
                   placeholder="Enter you Email"
                 />
               </div>
@@ -78,8 +58,8 @@ const Contact = () => {
                 <textarea
                   class="form-control"
                   name="message"
-                  value={data.message}
-                  onChange={InputEvent}
+                 
+                 
                   id="exampleFormControlTextarea1"
                   rows="3"
                 ></textarea>
