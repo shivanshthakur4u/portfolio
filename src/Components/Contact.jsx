@@ -31,7 +31,7 @@ const Contact = () => {
       <div className="container contact_div">
         <div className="row">
           <div class="col-md-6 col-10 mx-auto">
-            <form onSubmit={formSubmit}>
+            <form onSubmit={formSubmit} action="https://formspree.io/f/xyyljrpy" method="POST">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                   Full Name
